@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+
+    <h2>Find and Fillter array method 1</h2>
+    <h2>Map array 2</h2>
+    <!-- <h2>Splits and  Join mathos 3</h2> -->
+    <h3></h3>
+    <script>
+        // // Find and Fillter array
+
+        const companyName = [{
+            id: 101,
+            emName: "Ravi",
+            salary: 8000
+        }, {
+            id: 102,
+            emName: "Sabari",
+            salary: 10000
+        }, {
+            id: 103,
+            emName: "Guna",
+            salary: 20000
+        }, {
+            id: 104,
+            emName: "Abinash",
+            salary: 9000
+        }, {
+            id: 105,
+            emName: "Dinesh",
+            salary: 18000
+        }, {
+            id: 106,
+            emName: "Raja",
+            salary: 25000
+        }, {
+            id: 107,
+            emName: "Karthi",
+            salary: 30000
+        }, {
+            id: 108,
+            emName: "Ramesh",
+            salary: 23000
+        }, ];
+        // let montlySalary = companyName.filter(function(value) {
+        //     return value.salary < 15000;
+        // })
+        // console.log("Employee Monthly Salary in 15000 ", montlySalary);
+
+        // let montlySalary2 = companyName.filter(function (value) {
+        //     return value.salary > 15000;
+        // })
+        // console.log("Employee Monthly Salary in 15000 ",montlySalary2);
+
+        let montlySalary1 = companyName.find(function(value) {
+            return value.salary < 15000;
+        })
+        console.log("Employee Monthly Salary in 15000 ", montlySalary1);
+
+
+
+        // Map array
+        const student = [{
+            id: 105,
+            stfristname: "Guna",
+            stLastname: "Sanker"
+        }, {
+            id: 102,
+            stfristname: "Sabari",
+            stLastname: "Nathan"
+        }, {
+            id: 104,
+            stfristname: "Dinesh",
+            stLastname: "Kumar"
+        }, {
+            id: 101,
+            stfristname: "Ravi",
+            stLastname: "Kumar"
+        }, {
+            id: 103,
+            stfristname: "Abinash",
+            stLastname: "Seker"
+        }, ];
+
+        //    let stFullname= student.map(function(val){
+        //         return [val.stfristname, val.stLastname].join(" ")
+        //     });
+
+        // let stFullname = student.map(function (val) {
+        //     let fullName = [val.stfristname, val.stLastname].join(" ");
+        //     let obj = { "studentfullName": fullName };
+        //     return obj
+        // });
+        // console.log(stFullname);
+
+        // // Split and Join  array
+        // const myString = 'Hello World. How are you doing?'
+        // const splits = myString.split(' ')
+
+        // console.log(splits);
+
+        // const splitjoin = myString.split(' ').join(" ")
+
+        // console.log(splitjoin)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <script>
+        // Adding Arrays
+        // let languages=["html", "css", "Javascript", "My sql", "Php"]
+        //                 // 0,     1,     2,            3,        4
+        // // push
+        // languages.push("Php", "My sql") 
+
+        // // adding last elament
+
+        // // unshift
+        // languages.unshift("C","C++")
+
+        // // adding frist elament
+
+        // // splice
+        // languages.splice(4,0,"Angler js")
+
+        // // adding center elament
+
+
+        // // pop
+        // languages.pop()
+
+        // // shift
+        // languages.shift()
+
+        //  // splice
+        //  languages.splice(0,5)
+
+        // console.log(languages);
+
+
+        // // Referance Arrays
+
+        // const vegtables = [
+        //     { id: 1, itams: "Carrot", qty: "2kg" }, // 0
+        //     { id: 2, itams: "Onion", qty: "4kg" },  // 1
+        //     { id: 3, itams: "Potato", qty: "5kg" }, // 2
+        //     { id: 4, itams: "Tomato", qty: "5kg" }, // 3
+        // ]
+
+        // // let ourOrders1 = vegtables.findIndex(function (order) {
+        // //     return order.itams === "Carrot"
+        // // })
+
+        // // console.log(ourOrders1);
+
+        // // let ourOrders = vegtables.find(function (order) {
+        // //     return order.itams === "Carrot"
+        // // })
+
+        //   // console.log(ourOrders);
+
+        // // Arrow Function 
+
+        //  let ourOrders = vegtables.find((order) => order.itams === "Carrot")
+
+        // console.log(ourOrders);
+
+        // // arrow key function
+
+        // const daysWeekly = ["sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        // // // For of
+        // // for(let weekly of daysWeekly){
+        // //     console.log(weekly);
+        // // }
+
+        // // // For in
+        // // for(let weekly in daysWeekly){
+        // //     console.log(weekly, daysWeekly[weekly]);
+        // // }
+
+        // // For Each
+
+        // daysWeekly.forEach(weekly => console.log(weekly))
+
+        // // Spiting
+
+        // let postTitle = "This My spiting in js";
+        // let postSlag = postTitle.split(" ");
+        // let finalSlag = postSlag.join(" ");
+
+        // console.log(finalSlag);
+
+        // Sorting
+
+        const studentId = [
+            { id: 105, stName: "Guna" },
+            { id: 102, stName: "Sabari" },
+            { id: 104, stName: "Dinesh" },
+            { id: 101, stName: "Ravi" },
+            { id: 103, stName: "Abinash" },
+        ]
+
+        const studentId1 = [
+            { id: 105, stName: "Guna" },
+            { id: 102, stName: "Sabari" },
+            { id: 104, stName: "Dinesh" },
+            { id: 101, stName: "Ravi" },
+            { id: 103, stName: "Abinash" },
+        ]
+
+
+        studentId1.sort((a, b) => {
+            stNameA = a.stName.toLowerCase();
+            stNameB = b.stName.toLowerCase();
+
+            // a >= b -> -1
+            if (stNameA < stNameB) return -1;
+
+            // a <= b -> 1
+            if (stNameA > stNameB) return 1;
+
+            // a==b -> 0
+            return 0;
+        })
+        console.log(studentId1);
+
+        studentId.sort((a, b) => {
+            // a >= b -> -1
+            if (a.id < b.id) return -1;
+
+            // a <= b -> 1
+            if (a.id > b.id) return 1;
+
+            // a==b -> 0
+            return 0;
+        })
+
+        console.log(studentId);
+
+        const student = [
+            { id: 105, stName: "Guna", result: true },
+            { id: 102, stName: "Sabari", result: true },
+            { id: 104, stName: "Dinesh", result: true },
+            { id: 101, stName: "Ravi", result: true },
+            { id: 103, stName: "Abinash", result: true },
+        ]
+
+
+
+        const student1 = [
+            { id: 105, stName: "Guna", result: false },
+            { id: 102, stName: "Sabari", result: false },
+            { id: 104, stName: "Dinesh", result: false },
+            { id: 101, stName: "Ravi", result: false },
+            { id: 103, stName: "Abinash", result: false },
+        ]
+
+
+
+        let studentResult = student.every(function (stResult) {
+            return stResult.result === true;
+        })
+
+
+        let studentResult1 = student1.some(function (stResult) {
+            return stResult.result === true;
+        })
+
+        console.log(studentResult);
+        console.log(studentResult1);
+    </script>
+
+</body>
+
+</html>
