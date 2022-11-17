@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objcet and function</title>
+</head>
+
+<body>
+    <script>
+        //  Function and Object
+        let person = {
+            personName: "Arun",
+            age: 20,
+            inserted: ['learn javascript'],
+            address: {
+                city: "trichy",
+                state: "tamilnadu"
+            },
+            grent: function() {
+                let msg = `My name is ${this.personName} i ${this.inserted} in tamil`;
+                console.log(msg);
+            }
+        }
+        person.grent();
+
+        // OR
+
+        function createPerson(personName) {
+            return {
+                userName: personName,
+                inserted: ['learn javascript'],
+                grent() {
+                    let msg = `My name is ${this.userName} i ${this.inserted} in tamil`;
+                    console.log(msg);
+                }
+
+            };
+        }
+        let person1 = createPerson("Vijay");
+        let person2 = createPerson("Jeeva");
+        person1.grent();
+        person2.grent();
+
+        // Object
+        let person4 = {
+            name: "Karthi"
+        };
+        person4.age = 20;
+        console.log(person4);
+
+
+        // Function
+
+        function counter() {
+            var index = 0;
+
+            function increment() {
+                index = index + 1;
+                console.log(index);
+                return index;
+            }
+            return increment;
+        }
+
+        var userIncrement = counter(); // a reference to inner increment()
+        userIncrement(); // => 1
+        userIncrement(); // => 2
+    </script>
+</body>
+
+</html>
