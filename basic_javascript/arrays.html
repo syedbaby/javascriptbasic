@@ -96,21 +96,39 @@
 
         // Sorting
 
-        const studentId = [
-            { id: 105, stName: "Guna" },
-            { id: 102, stName: "Sabari" },
-            { id: 104, stName: "Dinesh" },
-            { id: 101, stName: "Ravi" },
-            { id: 103, stName: "Abinash" },
-        ]
+        const studentId = [{
+            id: 105,
+            stName: "Guna"
+        }, {
+            id: 102,
+            stName: "Sabari"
+        }, {
+            id: 104,
+            stName: "Dinesh"
+        }, {
+            id: 101,
+            stName: "Ravi"
+        }, {
+            id: 103,
+            stName: "Abinash"
+        }, ]
 
-        const studentId1 = [
-            { id: 105, stName: "Guna" },
-            { id: 102, stName: "Sabari" },
-            { id: 104, stName: "Dinesh" },
-            { id: 101, stName: "Ravi" },
-            { id: 103, stName: "Abinash" },
-        ]
+        const studentId1 = [{
+            id: 105,
+            stName: "Guna"
+        }, {
+            id: 102,
+            stName: "Sabari"
+        }, {
+            id: 104,
+            stName: "Dinesh"
+        }, {
+            id: 101,
+            stName: "Ravi"
+        }, {
+            id: 103,
+            stName: "Abinash"
+        }, ]
 
 
         studentId1.sort((a, b) => {
@@ -141,32 +159,33 @@
 
         console.log(studentId);
 
-        const student = [
-            { id: 105, stName: "Guna", result: true },
-            { id: 102, stName: "Sabari", result: true },
-            { id: 104, stName: "Dinesh", result: true },
-            { id: 101, stName: "Ravi", result: true },
-            { id: 103, stName: "Abinash", result: true },
-        ]
-
-
-
-        const student1 = [
-            { id: 105, stName: "Guna", result: false },
-            { id: 102, stName: "Sabari", result: false },
-            { id: 104, stName: "Dinesh", result: false },
-            { id: 101, stName: "Ravi", result: false },
-            { id: 103, stName: "Abinash", result: false },
-        ]
-
-
-
-        let studentResult = student.every(function (stResult) {
+        const student = [{
+            id: 105,
+            stName: "Guna",
+            result: true
+        }, {
+            id: 102,
+            stName: "Sabari",
+            result: true
+        }, {
+            id: 104,
+            stName: "Dinesh",
+            result: true
+        }, {
+            id: 101,
+            stName: "Ravi",
+            result: true
+        }, {
+            id: 103,
+            stName: "Abinash",
+            result: true
+        }, ]
+        let studentResult = student.every(function(stResult) {
             return stResult.result === true;
         })
 
 
-        let studentResult1 = student1.some(function (stResult) {
+        let studentResult1 = student.some(function(stResult) {
             return stResult.result === true;
         })
 
